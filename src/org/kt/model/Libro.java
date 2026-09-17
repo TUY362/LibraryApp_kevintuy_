@@ -1,13 +1,45 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.kt.model;
 
 /**
- *
- * @author informatica
+ * Clase que representa la entidad Libro.
  */
-public class j {
-    
+public class Libro {
+    private int idLibro;
+    private String titulo;
+    private String isbn;
+    private double precio;
+
+    /** Constructor vacío */
+    public Libro() {}
+
+    /**
+     * Constructor parametrizado.
+     * @param idLibro ID del libro.
+     * @param titulo Título de la obra.
+     * @param isbn Código ISBN.
+     * @param precio Precio de venta.
+     */
+    public Libro(int idLibro, String titulo, String isbn, double precio) {
+        this.idLibro = idLibro;
+        this.titulo = titulo;
+        this.isbn = isbn;
+        this.precio = precio;
+    }
+
+    public int getIdLibro() { return idLibro; }
+    public void setIdLibro(int idLibro) { this.idLibro = idLibro; }
+
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+
+    public String getIsbn() { return isbn; }
+    public void setIsbn(String isbn) { this.isbn = isbn; }
+
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
+
+    @Override
+    public String toString() {
+        return "Libro{" + "idLibro=" + idLibro + ", titulo=" + titulo + ", isbn=" + isbn + ", precio=" + precio + '}';
+    }
 }
